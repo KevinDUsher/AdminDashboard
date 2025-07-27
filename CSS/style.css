@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --blue: #1992D4;
+    --labelHeight: 1.5rem;
+    --lightGray: #8A8A8A;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.mainInfo{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+    min-height: 0;
+}
+
+.navBar{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.search{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.searchText{
+    background-color: #E2E8F0;
+    color: #E2E8F0;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 100%;
+    max-width: 40rem;
+}
+
+.userInfo{
+    grid-column: 5/6;
+    grid-row: 1/2;
+    justify-items: center;
+    display: grid;
+    grid-auto-flow: column;         /* Place items in a row */
+    justify-content:flex-start;        /* Center horizontally */
+    align-items: center;            /* Center vertically */
+    column-gap: 1.5rem; 
+    
+}
+
+.nameDrop{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.greetingImage{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: translateY(10%);
+}
+
+.greetingImageWrapper{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: yellow;
+}
+
+.greetingContainer{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+    padding: 0 0 1rem 3rem;
+}
+
+.hello{
+    font-weight: bold;
+}
+
+.userName{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.links{
+    grid-column: 5/6;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.5rem;
+    
+}
+
+.link{
+    height: 2rem;
+    width: 6rem;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 1rem;
+    padding: 0;
+}
+
+.sideBar{
+    grid-column: 1/2;
+    background-color: var(--blue);
+    z-index: 11;
+    box-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.mainArticles{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #E2E8F0;
+    padding: 1rem 1.5rem 0;
+    height: 100%;
+    min-height: 0;
+    row-gap: 2rem;
+}
+
+.projects{
+    padding: 1rem 1rem 4rem 1rem;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    min-height: 0;
+    
+}
+
+.projectLabel{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: var(--labelHeight);
+    font-weight: bold;
+}
+
+.article{
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: white;
+    border-left: 0.5rem solid #F0B429;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 1rem;
+
+}
+
+.rightBar{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.announcements{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 0 2rem;
+    margin-bottom: 0;
+    min-height: 0;
+    max-height: 100%;
+}
+
+.announceLabel, .trendingLabel{
+    font-weight: bold;
+    font-size: var(--labelHeight);
+    margin-bottom: 0.5rem;
+}
+
+.announceTitle, .artHead{
+    font-weight: bold;
+}
+.announceSec{
+    max-height: 100%;
+}
+.wrap{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    min-height: 0; 
+    box-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.announceSec{
+    min-height: 0;
+    margin: 1rem 1rem;
+    padding: 0 1rem;
+    overflow: hidden;
+    font-size: small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrap hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1rem 1rem;
+    
+}
+
+.trending{
+    margin: 0 3rem;
+    grid-row: 2;
+    border-radius: 1rem;
+    grid-template-rows: auto 1fr;
+    display: grid;
+    gap: 1rem;
+    min-height: 0;
+    max-height: 100%;
+}
+
+.trendingLabel{
+    font-weight: bold;
+}
+
+.trendUser{
+    display: grid;
+    grid-template-columns: auto 2fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trendImage{
+    grid-column: 1/3;
+}
+
+.trendTital{
+    font-weight: bold;
+}
+
+.trendProject{
+}
+
+/* photos */
+.artPhoto{
+    width: 25px;
+    height: 25px;
+}
+
+.profileImage{
+    width: 3rem;
+    height: auto;
+    transform: translateY(10%);
+}
+
+.profilePictureContainer{
+    width: 3rem;
+    height: 3rem;
+    background-color: yellow;
+    display: grid;
+    border-radius: 50%;
+    overflow: hidden;
+    place-items: center;
+}
+
+.searchImage{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.trendImage{
+    width: 3rem;
+    height: auto;
+    transform: translateY(10%);
+}
+
+.trendImageContainer{
+    width: 3rem;
+    height: 3rem;
+    background-color: purple;
+    display: grid;
+    border-radius: 50%;
+    overflow: hidden;
+    place-items: center;
+}
+
+.bellImage{
+    width: 2rem;
+    height: auto;
+}
+
+.sideItem{
+    display: grid;
+    grid-template-columns: auto 2fr;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    font-style: none;
+    text-decoration: none;
+}
+
+.sidebarImage{
+    grid-column: 1/2;
+    fill: white;
+    stroke: white;
+    width: 2rem;
+    height: 2rem;
+}
+
+.sidebarMainImage{
+    grid-column: 1/2;
+    fill: white;
+    stroke: white;
+    width: 4rem;
+    height: 4rem;
+}
+
+.sidebarLabel{
+    grid-column: 2/3;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.mainSidebarLabel{
+    grid-column: 2/3;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.artBar{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto;
+}
+
+
+.announceArt, .artSubj{
+    color: var(--lightGray);
+}
